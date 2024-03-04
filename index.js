@@ -1,4 +1,4 @@
-import { getLogs } from "./functions/getLogs";
+const getLogs = require("./functions/getLogs").getLogs;
 
 exports.handler = async (event) => {
     const logs = getLogs();
