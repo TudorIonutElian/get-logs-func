@@ -13,6 +13,14 @@ async function getLogs() {
             if (error) {
                 reject(error);
             } else {
+                connection.end((error) => {
+                    if (error) {
+                      console.error('Error closing MySQL connection:', error);
+                      return;
+                    }
+                
+                    console.log('MySQL connection closed.');
+                  });
                 resolve(results);
             }
         });
