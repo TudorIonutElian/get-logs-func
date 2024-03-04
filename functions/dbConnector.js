@@ -5,7 +5,7 @@ function connectToDatabase() {
         host: process.env.rds_instance_endpoint,
         user: process.env.rds_instance_username,
         password: process.env.rds_instance_password,
-        database: process.env.databaseName,
+        database: process.env.rds_instance_database_name,
     });
 }
 
