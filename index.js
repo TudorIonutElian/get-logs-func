@@ -1,7 +1,9 @@
 const getLogs = require("./functions/getLogs").getLogs;
 
 exports.handler = async (event) => {
-    const logs = getLogs();
+    const logs = await getLogs();
+
+    console.log(`Logs: ${logs}`);
   
     const response = {
       statusCode: 200,
