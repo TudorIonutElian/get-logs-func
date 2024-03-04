@@ -1,5 +1,5 @@
 
-const { connectToDatabase } = require('./connectToDatabase');
+const { connectToDatabase } = require('./dbConnector');
 
 /**
  * @method getLogs
